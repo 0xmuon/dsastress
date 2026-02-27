@@ -1,0 +1,20 @@
+[package]
+name = "dsastress"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool to stress-test DSA/competitive programming solutions using random input generators and reference solutions."
+license = "MIT"
+repository = ""
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+rand = "0.8"
+wait-timeout = "0.2"
+anyhow = "1.0"
+thiserror = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+

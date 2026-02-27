@@ -1,0 +1,783 @@
+   0.488096300s  INFO prepare_target{force=false package_id=dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress) target="dsastress"}: cargo::core::compiler::fingerprint: fingerprint error for dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress)/Check { test: false }/TargetInner { name: "dsastress", doc: true, ..: with_path("C:\\Users\\khush\\Desktop\\DSAstress\\src/main.rs", Edition2021) }
+   0.525265300s  INFO prepare_target{force=false package_id=dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress) target="dsastress"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\dsastress-fdb7d5f6bd548809\bin-dsastress`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   0.593945200s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="anyhow"}: cargo::core::compiler::fingerprint: fingerprint error for anyhow v1.0.102/Check { test: false }/TargetInner { ..: lib_target("anyhow", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anyhow-1.0.102\\src/lib.rs", Edition2021) }
+   0.594002400s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="anyhow"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\anyhow-4830f3fbb8466c7c\lib-anyhow`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.595318000s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for anyhow v1.0.102/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anyhow-1.0.102\\build.rs", Edition2021) }
+   0.595353800s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\anyhow-9db862483cbcd140\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.595728600s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for anyhow v1.0.102/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anyhow-1.0.102\\build.rs", Edition2021) }
+   0.595752100s  INFO prepare_target{force=false package_id=anyhow v1.0.102 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\anyhow-3563da0f770160b3\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.598654000s  INFO prepare_target{force=false package_id=clap v4.5.60 target="clap"}: cargo::core::compiler::fingerprint: fingerprint error for clap v4.5.60/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\clap-4.5.60\\src/lib.rs", Edition2021) }
+   0.598709200s  INFO prepare_target{force=false package_id=clap v4.5.60 target="clap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\clap-044fdc411b7c43a0\lib-clap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.599659100s  INFO prepare_target{force=false package_id=clap_builder v4.5.60 target="clap_builder"}: cargo::core::compiler::fingerprint: fingerprint dirty for clap_builder v4.5.60/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap_builder", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\clap_builder-4.5.60\\src/lib.rs", Edition2021) }
+   0.599684800s  INFO prepare_target{force=false package_id=clap_builder v4.5.60 target="clap_builder"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.600710100s  INFO prepare_target{force=false package_id=anstream v0.6.21 target="anstream"}: cargo::core::compiler::fingerprint: fingerprint dirty for anstream v0.6.21/Check { test: false }/TargetInner { ..: lib_target("anstream", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anstream-0.6.21\\src/lib.rs", Edition2021) }
+   0.600744600s  INFO prepare_target{force=false package_id=anstream v0.6.21 target="anstream"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.603172100s  INFO prepare_target{force=false package_id=anstyle v1.0.13 target="anstyle"}: cargo::core::compiler::fingerprint: fingerprint dirty for anstyle v1.0.13/Check { test: false }/TargetInner { ..: lib_target("anstyle", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anstyle-1.0.13\\src/lib.rs", Edition2021) }
+   0.603302000s  INFO prepare_target{force=false package_id=anstyle v1.0.13 target="anstyle"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.604482900s  INFO prepare_target{force=false package_id=anstyle-parse v0.2.7 target="anstyle_parse"}: cargo::core::compiler::fingerprint: fingerprint dirty for anstyle-parse v0.2.7/Check { test: false }/TargetInner { ..: lib_target("anstyle_parse", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anstyle-parse-0.2.7\\src/lib.rs", Edition2021) }
+   0.604520400s  INFO prepare_target{force=false package_id=anstyle-parse v0.2.7 target="anstyle_parse"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.605364300s  INFO prepare_target{force=false package_id=utf8parse v0.2.2 target="utf8parse"}: cargo::core::compiler::fingerprint: fingerprint dirty for utf8parse v0.2.2/Check { test: false }/TargetInner { ..: lib_target("utf8parse", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\utf8parse-0.2.2\\src/lib.rs", Edition2018) }
+   0.605400700s  INFO prepare_target{force=false package_id=utf8parse v0.2.2 target="utf8parse"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.606447200s  INFO prepare_target{force=false package_id=anstyle-query v1.1.5 target="anstyle_query"}: cargo::core::compiler::fingerprint: fingerprint dirty for anstyle-query v1.1.5/Check { test: false }/TargetInner { ..: lib_target("anstyle_query", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anstyle-query-1.1.5\\src/lib.rs", Edition2021) }
+   0.606488700s  INFO prepare_target{force=false package_id=anstyle-query v1.1.5 target="anstyle_query"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.608418300s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for windows-sys v0.61.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows_sys", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\windows-sys-0.61.2\\src/lib.rs", Edition2021) }
+   0.608523200s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.609830300s  INFO prepare_target{force=false package_id=windows-link v0.2.1 target="windows_link"}: cargo::core::compiler::fingerprint: fingerprint dirty for windows-link v0.2.1/Check { test: false }/TargetInner { ..: lib_target("windows_link", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\windows-link-0.2.1\\src/lib.rs", Edition2021) }
+   0.609866600s  INFO prepare_target{force=false package_id=windows-link v0.2.1 target="windows_link"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.611113100s  INFO prepare_target{force=false package_id=anstyle-wincon v3.0.11 target="anstyle_wincon"}: cargo::core::compiler::fingerprint: fingerprint dirty for anstyle-wincon v3.0.11/Check { test: false }/TargetInner { ..: lib_target("anstyle_wincon", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\anstyle-wincon-3.0.11\\src/lib.rs", Edition2021) }
+   0.611155900s  INFO prepare_target{force=false package_id=anstyle-wincon v3.0.11 target="anstyle_wincon"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.612350000s  INFO prepare_target{force=false package_id=once_cell_polyfill v1.70.2 target="once_cell_polyfill"}: cargo::core::compiler::fingerprint: fingerprint dirty for once_cell_polyfill v1.70.2/Check { test: false }/TargetInner { ..: lib_target("once_cell_polyfill", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\once_cell_polyfill-1.70.2\\src/lib.rs", Edition2021) }
+   0.612403400s  INFO prepare_target{force=false package_id=once_cell_polyfill v1.70.2 target="once_cell_polyfill"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.613359200s  INFO prepare_target{force=false package_id=colorchoice v1.0.4 target="colorchoice"}: cargo::core::compiler::fingerprint: fingerprint dirty for colorchoice v1.0.4/Check { test: false }/TargetInner { ..: lib_target("colorchoice", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\colorchoice-1.0.4\\src/lib.rs", Edition2021) }
+   0.613446500s  INFO prepare_target{force=false package_id=colorchoice v1.0.4 target="colorchoice"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.615807000s  INFO prepare_target{force=false package_id=is_terminal_polyfill v1.70.2 target="is_terminal_polyfill"}: cargo::core::compiler::fingerprint: fingerprint dirty for is_terminal_polyfill v1.70.2/Check { test: false }/TargetInner { ..: lib_target("is_terminal_polyfill", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\is_terminal_polyfill-1.70.2\\src/lib.rs", Edition2021) }
+   0.615884200s  INFO prepare_target{force=false package_id=is_terminal_polyfill v1.70.2 target="is_terminal_polyfill"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.617006300s  INFO prepare_target{force=false package_id=clap_lex v1.0.0 target="clap_lex"}: cargo::core::compiler::fingerprint: fingerprint dirty for clap_lex v1.0.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap_lex", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\clap_lex-1.0.0\\src/lib.rs", Edition2021) }
+   0.617047500s  INFO prepare_target{force=false package_id=clap_lex v1.0.0 target="clap_lex"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.618065300s  INFO prepare_target{force=false package_id=strsim v0.11.1 target="strsim"}: cargo::core::compiler::fingerprint: fingerprint dirty for strsim v0.11.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("strsim", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\strsim-0.11.1\\src\\lib.rs", Edition2015) }
+   0.618130600s  INFO prepare_target{force=false package_id=strsim v0.11.1 target="strsim"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.618923700s  INFO prepare_target{force=false package_id=clap_derive v4.5.55 target="clap_derive"}: cargo::core::compiler::fingerprint: fingerprint error for clap_derive v4.5.55/Build/TargetInner { benched: false, for_host: true, proc_macro: true, ..: lib_target("clap_derive", ["proc-macro"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\clap_derive-4.5.55\\src/lib.rs", Edition2021) }
+   0.618959600s  INFO prepare_target{force=false package_id=clap_derive v4.5.55 target="clap_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\clap_derive-67cde91e08f240d3\lib-clap_derive`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.621447100s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="proc_macro2"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.106/Build/TargetInner { ..: lib_target("proc_macro2", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\proc-macro2-1.0.106\\src/lib.rs", Edition2021) }
+   0.621659300s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="proc_macro2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\proc-macro2-e00212d467617501\lib-proc_macro2`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.623685200s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.106/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\proc-macro2-1.0.106\\build.rs", Edition2021) }
+   0.623732900s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\proc-macro2-a1bbef127a168080\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.624118000s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.106/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\proc-macro2-1.0.106\\build.rs", Edition2021) }
+   0.624146100s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.106 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\proc-macro2-ea69a7742c0b730e\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.625133600s  INFO prepare_target{force=false package_id=quote v1.0.44 target="quote"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.44/Build/TargetInner { ..: lib_target("quote", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\quote-1.0.44\\src/lib.rs", Edition2021) }
+   0.625166600s  INFO prepare_target{force=false package_id=quote v1.0.44 target="quote"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\quote-78cd9b63177f19a0\lib-quote`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.626377400s  INFO prepare_target{force=false package_id=quote v1.0.44 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.44/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\quote-1.0.44\\build.rs", Edition2021) }
+   0.626399900s  INFO prepare_target{force=false package_id=quote v1.0.44 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\quote-dcadf8abcab8d9d7\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.626619700s  INFO prepare_target{force=false package_id=quote v1.0.44 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.44/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\quote-1.0.44\\build.rs", Edition2021) }
+   0.626635300s  INFO prepare_target{force=false package_id=quote v1.0.44 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\quote-01d6469b73ce37a7\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.627500500s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint: fingerprint error for syn v2.0.117/Build/TargetInner { ..: lib_target("syn", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\syn-2.0.117\\src/lib.rs", Edition2021) }
+   0.627613900s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\syn-0b9bb3208d342eed\lib-syn`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.628432800s  INFO prepare_target{force=false package_id=rand v0.8.5 target="rand"}: cargo::core::compiler::fingerprint: fingerprint error for rand v0.8.5/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\rand-0.8.5\\src\\lib.rs", Edition2018) }
+   0.628461800s  INFO prepare_target{force=false package_id=rand v0.8.5 target="rand"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\rand-9ebb12f2e735f5ba\lib-rand`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.629060600s  INFO prepare_target{force=false package_id=rand_chacha v0.3.1 target="rand_chacha"}: cargo::core::compiler::fingerprint: fingerprint error for rand_chacha v0.3.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand_chacha", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\rand_chacha-0.3.1\\src\\lib.rs", Edition2018) }
+   0.629089900s  INFO prepare_target{force=false package_id=rand_chacha v0.3.1 target="rand_chacha"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\rand_chacha-bcfc65a7e70d7081\lib-rand_chacha`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.629698900s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint: fingerprint error for ppv-lite86 v0.2.21/Check { test: false }/TargetInner { ..: lib_target("ppv_lite86", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\ppv-lite86-0.2.21\\src/lib.rs", Edition2021) }
+   0.629726500s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\ppv-lite86-0fb672a0c458855d\lib-ppv_lite86`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.630714700s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="zerocopy"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.40/Check { test: false }/TargetInner { ..: lib_target("zerocopy", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\zerocopy-0.8.40\\src/lib.rs", Edition2021) }
+   0.630798800s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="zerocopy"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\zerocopy-16556007267e947d\lib-zerocopy`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.633405400s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.40/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\zerocopy-0.8.40\\build.rs", Edition2021) }
+   0.633443900s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\zerocopy-062fe4c4fb8875f3\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_path
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.633825800s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.40/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\zerocopy-0.8.40\\build.rs", Edition2021) }
+   0.633857600s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\zerocopy-04413d596d1f59e6\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_path
+  14: git_filter_source_path
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.635672600s  INFO prepare_target{force=false package_id=rand_core v0.6.4 target="rand_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for rand_core v0.6.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand_core", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\rand_core-0.6.4\\src\\lib.rs", Edition2018) }
+   0.635937000s  INFO prepare_target{force=false package_id=rand_core v0.6.4 target="rand_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.638740800s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint dirty for getrandom v0.2.17/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\getrandom-0.2.17\\src/lib.rs", Edition2018) }
+   0.638784500s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.639506500s  INFO prepare_target{force=false package_id=cfg-if v1.0.4 target="cfg_if"}: cargo::core::compiler::fingerprint: fingerprint dirty for cfg-if v1.0.4/Check { test: false }/TargetInner { ..: lib_target("cfg_if", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\cfg-if-1.0.4\\src/lib.rs", Edition2018) }
+   0.639532900s  INFO prepare_target{force=false package_id=cfg-if v1.0.4 target="cfg_if"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.640229400s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="thiserror"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror v1.0.69/Check { test: false }/TargetInner { ..: lib_target("thiserror", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\thiserror-1.0.69\\src/lib.rs", Edition2021) }
+   0.640254300s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="thiserror"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\thiserror-5812b22ba8a54d3e\lib-thiserror`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.641501900s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror v1.0.69/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\thiserror-1.0.69\\build.rs", Edition2021) }
+   0.641532800s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\thiserror-19c1aca003702057\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.641899500s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror v1.0.69/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\thiserror-1.0.69\\build.rs", Edition2021) }
+   0.641932300s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\thiserror-e262577e32d23dae\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.642932400s  INFO prepare_target{force=false package_id=thiserror-impl v1.0.69 target="thiserror_impl"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror-impl v1.0.69/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("thiserror_impl", ["proc-macro"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\thiserror-impl-1.0.69\\src/lib.rs", Edition2021) }
+   0.642964500s  INFO prepare_target{force=false package_id=thiserror-impl v1.0.69 target="thiserror_impl"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\thiserror-impl-d1a56161b6cf9ba8\lib-thiserror_impl`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.643776700s  INFO prepare_target{force=false package_id=wait-timeout v0.2.1 target="wait_timeout"}: cargo::core::compiler::fingerprint: fingerprint dirty for wait-timeout v0.2.1/Check { test: false }/TargetInner { ..: lib_target("wait_timeout", ["lib"], "C:\\Users\\khush\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\wait-timeout-0.2.1\\src/lib.rs", Edition2015) }
+   0.643802300s  INFO prepare_target{force=false package_id=wait-timeout v0.2.1 target="wait_timeout"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(Stale)
+   0.644658100s  INFO prepare_target{force=false package_id=dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress) target="dsastress"}: cargo::core::compiler::fingerprint: fingerprint error for dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress)/Check { test: true }/TargetInner { name: "dsastress", doc: true, ..: with_path("C:\\Users\\khush\\Desktop\\DSAstress\\src/main.rs", Edition2021) }
+   0.644785400s  INFO prepare_target{force=false package_id=dsastress v0.1.0 (C:\Users\khush\Desktop\DSAstress) target="dsastress"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\khush\Desktop\DSAstress\target\debug\.fingerprint\dsastress-e6f702cfe62512dc\test-bin-dsastress`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.44
+    Checking windows-link v0.2.1
+   Compiling zerocopy v0.8.40
+    Checking anstyle v1.0.13
+    Checking once_cell_polyfill v1.70.2
+    Checking utf8parse v0.2.2
+    Checking cfg-if v1.0.4
+    Checking windows-sys v0.61.2
+    Checking getrandom v0.2.17
+    Checking is_terminal_polyfill v1.70.2
+    Checking anstyle-parse v0.2.7
+    Checking colorchoice v1.0.4
+error: could not compile `quote` (build script) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+    Checking clap_lex v1.0.0
+error: could not compile `proc-macro2` (build script) due to 2 previous errors
+   Compiling anyhow v1.0.102
+    Checking strsim v0.11.1
+   Compiling thiserror v1.0.69
+    Checking rand_core v0.6.4
+    Checking wait-timeout v0.2.1
+error: could not compile `zerocopy` (build script) due to 2 previous errors
+error: could not compile `anyhow` (build script) due to 2 previous errors
+error: could not compile `thiserror` (build script) due to 2 previous errors
+    Checking anstyle-wincon v3.0.11
+    Checking anstyle-query v1.1.5
+    Checking anstream v0.6.21
+    Checking clap_builder v4.5.60
