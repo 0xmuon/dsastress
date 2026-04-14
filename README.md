@@ -41,7 +41,10 @@ dsastress \
   --solution "python sol.py" \
   --reference "python brute.py" \
   --tests 1000 \
-  --time-limit-ms 2000
+  --time-limit-ms 5000 \
+  --seed 12345 \
+  --minimize \
+  --save-dir failing_cases
 ```
 
 If your solution ever disagrees with the reference, `dsastress`:
@@ -71,7 +74,7 @@ If your solution ever disagrees with the reference, `dsastress`:
 - **`-n, --tests <N>`** (default: `1000`)  
   Number of tests to run.
 
-- **`--time-limit-ms <MS>`** (default: `2000`)  
+- **`--time-limit-ms <MS>`** (default: `5000`)  
   Time limit per command in milliseconds.  
   This applies separately to:
   - The generator
@@ -84,6 +87,28 @@ If your solution ever disagrees with the reference, `dsastress`:
 
 - **`-v, --verbose`**  
   Print more detailed logs (e.g. per-test progress).
+
+- **`--seed <U64>`**  
+  Base seed for reproducibility. The tool exports:
+  - `DSASTRESS_SEED=<seed>`
+  - `DSASTRESS_TEST=<test_index>`
+  
+  If your generator reads these, you can reproduce failures exactly.
+
+- **`--minimize`**  
+  Automatically tries to **minimize the failing input** (ddmin-style) so you get the smallest repro.
+
+- **`--minimize-mode <lines|tokens>`** (default: `lines`)  
+  Minimization strategy. `lines` is safer (keeps formatting); `tokens` is more aggressive.
+
+- **`--minimize-time-ms <MS>`** (default: `10000`)  
+  Time budget per failure for minimization.
+
+- **`--save-dir <DIR>`**  
+  Save failing cases into numbered folders with `input.txt`, `expected.txt`, `got.txt`, and stderr (when available).
+
+- **`--no-save-failing`**  
+  If you set `--save-dir`, this disables saving artifacts.
 
 ---
 
@@ -118,10 +143,21 @@ dsastress \
   --solution  "python3 my_stable_groups_fast.py" \
   --reference "python3 examples/stable_groups/brute.py" \
   --tests 10000 \
-  --time-limit-ms 2000
+  --time-limit-ms 5000
 ```
 
 This is the “optimistic” workflow: you assume your fast CF-style solution is correct, then let `dsastress` hammer it with thousands of random tests to prove it.
+
+---
+
+### Example: Same test in Rust + C++
+
+In `examples/pair_sum/` you’ll find the same tiny problem implemented as:
+
+- `fast.rs` / `brute.rs`
+- `fast.cpp` / `brute.cpp`
+
+along with a reproducible generator `gen.py` that reads `DSASTRESS_SEED` and `DSASTRESS_TEST`.
 
 ---
 
@@ -130,6 +166,20 @@ This is the “optimistic” workflow: you assume your fast CF-style solution is
 - The commands you provide are run via the system shell (`sh -c` on Unix, `cmd /C` on Windows).
 - Input is passed via **stdin**, and only **stdout** is compared between reference and solution (after trimming trailing whitespace).
 - Stderr from failing commands is printed to help with debugging.
+
+#### Reproducible generators
+
+To make your generator reproducible, read `DSASTRESS_SEED` and `DSASTRESS_TEST`.
+
+Example (Python):
+
+```python
+import os, random
+
+seed = int(os.environ.get("DSASTRESS_SEED", "0"))
+t = int(os.environ.get("DSASTRESS_TEST", "0"))
+random.seed((seed << 20) ^ t)
+```
 
 This tool is intentionally minimal and focused on being **easy to drop into any DSA / competitive programming workflow**.
 
