@@ -5,7 +5,7 @@ use std::time::Duration;
 use anyhow::Result;
 
 use crate::exec::{format_exec_error, run_with_timeout, ExecError};
-use crate::minimize::{ddmin, MinimizeConfig, MinimizeMode};
+use crate::minimize::{ddmin_cached, MinimizeConfig, MinimizeMode};
 
 #[derive(Debug, Clone)]
 pub struct RunConfig {
@@ -22,6 +22,7 @@ pub struct RunConfig {
     pub minimize_time_limit: Duration,
     pub save_dir: Option<PathBuf>,
     pub save_failing: bool,
+    pub input_file: Option<PathBuf>,
 }
 
 #[derive(Debug, Clone)]
@@ -88,7 +89,11 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
     } else {
         println!("  reference : (none, only checking crashes / timeouts)");
     }
-    println!("  tests     : {}", cfg.tests);
+    if let Some(p) = &cfg.input_file {
+        println!("  input file: {}", p.display());
+    } else {
+        println!("  tests     : {}", cfg.tests);
+    }
     println!(
         "  time limit: {} ms per command",
         cfg.time_limit.as_millis()
@@ -112,7 +117,12 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
     }
     println!();
 
-    for t in 1..=cfg.tests {
+    let total_tests = if cfg.input_file.is_some() {
+        1
+    } else {
+        cfg.tests
+    };
+    for t in 1..=total_tests {
         tests_run = t;
         if cfg.verbose || t % 100 == 0 {
             println!("Running test {t}");
@@ -123,16 +133,27 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
             ("DSASTRESS_TEST", t.to_string()),
         ];
 
-        // 1) Generate input
-        let gen_out = match run_with_timeout(&cfg.generator_cmd, None, cfg.time_limit, &env) {
-            Ok(out) => out.stdout,
-            Err(e) => {
-                eprintln!("[TEST {t}] Generator failed: {}", format_exec_error(&e));
-                failures += 1;
-                if !cfg.keep_going {
+        // 1) Generate input (or replay from file)
+        let gen_out = if let Some(p) = &cfg.input_file {
+            match fs::read(p) {
+                Ok(bytes) => bytes,
+                Err(e) => {
+                    eprintln!("[TEST {t}] Failed to read input file: {e}");
+                    failures += 1;
                     break;
                 }
-                continue;
+            }
+        } else {
+            match run_with_timeout(&cfg.generator_cmd, None, cfg.time_limit, &env) {
+                Ok(out) => out.stdout,
+                Err(e) => {
+                    eprintln!("[TEST {t}] Generator failed: {}", format_exec_error(&e));
+                    failures += 1;
+                    if !cfg.keep_going {
+                        break;
+                    }
+                    continue;
+                }
             }
         };
 
@@ -168,7 +189,7 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
                             time_limit: cfg.minimize_time_limit,
                             ..Default::default()
                         };
-                        failing = ddmin(&failing, &mcfg, |cand| {
+                        failing = ddmin_cached(&failing, &mcfg, |cand| {
                             interesting_mismatch(cand, cfg, &env)
                         });
                     }
@@ -198,7 +219,7 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
                         time_limit: cfg.minimize_time_limit,
                         ..Default::default()
                     };
-                    failing = ddmin(&failing, &mcfg, |cand| {
+                    failing = ddmin_cached(&failing, &mcfg, |cand| {
                         interesting_mismatch(cand, cfg, &env)
                     });
                 }
@@ -272,7 +293,11 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
     }
 
     println!("\nSummary:");
-    println!("  total tests requested : {}", cfg.tests);
+    if cfg.input_file.is_some() {
+        println!("  total tests requested : 1 (input-file replay)");
+    } else {
+        println!("  total tests requested : {}", cfg.tests);
+    }
     println!("  total tests run       : {tests_run}");
     println!("  failures              : {failures}");
     if cfg.reference_cmd.is_some() {
@@ -290,4 +315,23 @@ pub fn run(cfg: &RunConfig) -> Result<RunSummary> {
         failures,
         mismatches,
     })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::normalize;
+
+    #[test]
+    fn normalize_trims_trailing_whitespace_and_normalizes_crlf() {
+        let input = b"hello\r\nworld\r\n\r\n";
+        let out = normalize(input);
+        assert_eq!(out, "hello\nworld");
+    }
+
+    #[test]
+    fn normalize_preserves_internal_newlines() {
+        let input = b"a\n\nb\n";
+        let out = normalize(input);
+        assert_eq!(out, "a\n\nb");
+    }
 }

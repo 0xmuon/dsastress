@@ -1,4 +1,8 @@
 use std::time::{Duration, Instant};
+use std::{
+    collections::HashMap,
+    hash::{Hash, Hasher},
+};
 
 #[derive(Debug, Clone, Copy)]
 pub enum MinimizeMode {
@@ -134,4 +138,96 @@ where
     }
 
     join_units(cfg.mode, &units)
+}
+
+/// `ddmin` with a small in-memory cache to avoid rerunning identical candidates.
+///
+/// This is particularly useful when `is_interesting` is expensive (spawning processes).
+pub fn ddmin_cached<F>(input: &[u8], cfg: &MinimizeConfig, mut is_interesting: F) -> Vec<u8>
+where
+    F: FnMut(&[u8]) -> bool,
+{
+    let mut cache: HashMap<(u64, usize), bool> = HashMap::new();
+    ddmin(input, cfg, |cand| {
+        let mut hasher = std::collections::hash_map::DefaultHasher::new();
+        cand.hash(&mut hasher);
+        let h = hasher.finish();
+        let key = (h, cand.len());
+        if let Some(v) = cache.get(&key) {
+            return *v;
+        }
+        let v = is_interesting(cand);
+        cache.insert(key, v);
+        v
+    })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn ddmin_returns_original_when_not_interesting() {
+        let input = b"1 2 3\n".to_vec();
+        let cfg = MinimizeConfig {
+            mode: MinimizeMode::Lines,
+            time_limit: Duration::from_millis(50),
+            max_rounds: 1000,
+        };
+        let out = ddmin(&input, &cfg, |_| false);
+        assert_eq!(out, input);
+    }
+
+    #[test]
+    fn ddmin_lines_can_reduce_to_single_line() {
+        let input = b"keep\nremove1\nremove2\n".to_vec();
+        let cfg = MinimizeConfig {
+            mode: MinimizeMode::Lines,
+            time_limit: Duration::from_millis(200),
+            max_rounds: 10_000,
+        };
+
+        // Interesting if it contains "keep" and at least one other line (forces ddmin to search).
+        let out = ddmin(&input, &cfg, |cand| {
+            let s = String::from_utf8_lossy(cand);
+            s.contains("keep") && s.lines().count() >= 1
+        });
+        let s = String::from_utf8_lossy(&out);
+        assert!(s.contains("keep"));
+        assert!(s.lines().count() >= 1);
+    }
+
+    #[test]
+    fn ddmin_tokens_keeps_required_token() {
+        let input = b"alpha beta gamma delta\n".to_vec();
+        let cfg = MinimizeConfig {
+            mode: MinimizeMode::Tokens,
+            time_limit: Duration::from_millis(200),
+            max_rounds: 10_000,
+        };
+
+        // Interesting iff token "gamma" exists.
+        let out = ddmin(&input, &cfg, |cand| {
+            let s = String::from_utf8_lossy(cand);
+            s.split_whitespace().any(|t| t == "gamma")
+        });
+
+        let binding = String::from_utf8_lossy(&out);
+        let toks: Vec<&str> = binding.split_whitespace().collect();
+        assert!(toks.contains(&"gamma"));
+        // Should be reasonably minimized; the smallest interesting input is just "gamma".
+        assert_eq!(toks, vec!["gamma"]);
+    }
+
+    #[test]
+    fn ddmin_handles_empty_input() {
+        let input = b"".to_vec();
+        let cfg = MinimizeConfig {
+            mode: MinimizeMode::Lines,
+            time_limit: Duration::from_millis(50),
+            max_rounds: 1000,
+        };
+        let out = ddmin(&input, &cfg, |_| true);
+        assert!(out.is_empty());
+    }
 }

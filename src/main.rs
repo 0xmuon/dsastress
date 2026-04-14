@@ -79,6 +79,12 @@ struct Cli {
     /// Disable saving failing cases (if --save-dir is set).
     #[arg(long = "no-save-failing", action = ArgAction::SetTrue)]
     no_save_failing: bool,
+
+    /// Replay a specific input from a file (skips the generator).
+    ///
+    /// Useful to reproduce a failing `input.txt` saved by `--save-dir`.
+    #[arg(long = "input-file")]
+    input_file: Option<std::path::PathBuf>,
 }
 
 fn main() -> Result<()> {
@@ -104,6 +110,7 @@ fn main() -> Result<()> {
         minimize_time_limit: Duration::from_millis(cli.minimize_time_ms),
         save_dir: cli.save_dir,
         save_failing: !cli.no_save_failing,
+        input_file: cli.input_file,
     };
 
     let _summary = run(&cfg)?;

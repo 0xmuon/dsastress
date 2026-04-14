@@ -110,6 +110,9 @@ If your solution ever disagrees with the reference, `dsastress`:
 - **`--no-save-failing`**  
   If you set `--save-dir`, this disables saving artifacts.
 
+- **`--input-file <PATH>`**  
+  Replay a specific testcase from a file (skips the generator). This is useful to reproduce a saved `input.txt` from `--save-dir`.
+
 ---
 
 ### Typical Workflow
@@ -182,4 +185,16 @@ random.seed((seed << 20) ^ t)
 ```
 
 This tool is intentionally minimal and focused on being **easy to drop into any DSA / competitive programming workflow**.
+
+#### Replay a saved failing case
+
+If you saved a failure to `failing_cases/case_000123/input.txt`, you can replay it directly:
+
+```bash
+dsastress \
+  --generator "python gen.py" \
+  --solution  "python sol.py" \
+  --reference "python brute.py" \
+  --input-file "failing_cases/case_000123/input.txt"
+```
 
