@@ -1,6 +1,6 @@
 [package]
 name = "dsastress"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "CLI tool to stress-test DSA/competitive programming solutions using random input generators and reference solutions."
 license = "MIT"
